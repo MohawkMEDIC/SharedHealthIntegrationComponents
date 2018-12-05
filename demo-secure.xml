@@ -1,0 +1,137 @@
+<AffinityDomain oid="1.3.6.1.4.1.33349.3.1.2.2.0.0" name="DEMO-SECURE" permission="RW">
+
+	<!-- Consent Policies -->
+	<Policies>
+		<Policy display="Clinical-Staff" code="1.3.6.1.4.1.21367.2006.7.101" codingScheme="Connect-a-thon confidentialityCodes">
+			<Acknowledgement>
+				<PolicyDocument>http://abrp.bizland.com/sample.pdf</PolicyDocument>
+			</Acknowledgement>
+			<Acl>
+				<Entry role="*" permission="*" action="Allow"/>
+			</Acl>
+		</Policy>
+		<Policy display="Restricted Sharing" code="1.3.6.1.4.1.21367.2006.7.109" codingScheme="Connect-a-thon confidentialityCodes">
+			<Acknowledgement>
+				<PolicyDocument>http://abrp.bizland.com/sample.pdf</PolicyDocument>
+			</Acknowledgement>
+			<Acl>
+				<Entry role="*" permission="*" action="Elevate"/>
+			</Acl>
+		</Policy>
+		<Policy display="Clinical-Attorney" code="1.3.6.1.4.1.21367.2006.7.103" codingScheme="Connect-a-thon confidentialityCodes">
+			<Acknowledgement>
+				<PolicyDocument>http://abrp.bizland.com/sample.pdf</PolicyDocument>
+			</Acknowledgement>
+			<Acl>
+				<Entry role="*" permission="*" action="Allow"/>
+			</Acl>
+		</Policy>
+		<Policy display="Taboo" code="T" codingScheme="2.16.840.1.113883.5.25" duration="2419200">
+			<Acknowledgement>
+				<PolicyDocument>http://abrp.bizland.com/sample.pdf</PolicyDocument>
+			</Acknowledgement>
+			<Acl>
+				<Entry role="*" permission="*" action="Elevate"/>
+			</Acl>
+		</Policy>
+	</Policies>
+
+	<!-- If an SVS actor is present the following value sets must be present and available in the SVS Repository -->
+	<!--<ValueSets>
+		<ValueSet id="1.3.6.1.4.1.21367.101.1" description="typeCode" attribute="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.2" description="classCode" attribute="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.3" description="formatCode" attribute="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.4" description="eventCodeList" attribute="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.5" description="contentTypeCode" attribute="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.6" description="practiceSettingCode" attribute="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.7" description="healthcareFacilityTypeCode" attribute="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.8" description="folderCodeList" attribute="urn:uuid:1ba97051-7806-41a8-a48b-8fce7af683c5" />
+		<ValueSet id="1.3.6.1.4.1.21367.101.9" description="confidentialityCode" attribute="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" />
+	</ValueSets>-->
+
+	<!-- If an SVS actor is NOT present, The following codes must be present -->
+	<Codes>
+		<CodeType attribute="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" description="healthcareFacilityTypeCode">
+			<Code code="Home" display="Home" codingScheme="Connect-a-thon healthcareFacilityTypeCodes"/>
+			<Code code="Outpatient" display="Outpatient" codingScheme="Connect-a-thon healthcareFacilityTypeCodes"/>
+			<Code code="PSYCHF" display="Psychiatric care facility" codingScheme="2.16.840.1.113883.5.11"/>
+			<Code code="281PC2000N" display="Hospitals; Chronic Disease Hospital; Children" codingScheme="2.16.840.1.113883.5.11"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" description="practiceSettingCode">
+			<Code code="Home" display="Home" codingScheme="Connect-a-thon practiceSettingCodes"/>
+			<Code code="Psychiatry" display="Psychiatry" codingScheme="Connect-a-thon practiceSettingCodes"/>
+			<Code code="410001006" display="Military Medicine" codingScheme="2.16.840.1.113883.6.96"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" description="typeCode">
+			<Code code="11488-4" display="Consultation Note" codingScheme="LOINC"/>
+			<Code code="34108-1" display="Outpatient Evaluation And Management" codingScheme="LOINC"/>
+			<Code code="28573-4" display="Physician Surgical Operation Note" codingScheme="LOINC"/>
+			<Code code="Laboratory Report" display="Laboratory Report" codingScheme="Connect-a-thon TypeCode"/>
+			<Code code="34103-2" display="Pulmonary Consultation Note" codingScheme="LOINC"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" description="classCode">
+			<Code code="Consent" display="Consent" codingScheme="Connect-a-thon classCodes"/>
+			<Code code="Communication" display="Communication" codingScheme="Connect-a-thon classCodes"/>
+			<Code code="Initial evaluation" display="Initial evaluation" codingScheme="Connect-a-thon classCodes"/>
+			<Code code="26436-6" codingScheme="2.16.840.1.113883.6.1" display="LABORATORY STUDIES"/>
+			<Code code="34133-9" codingScheme="2.16.840.1.113883.6.1" display="SUMMARIZATION OF EPISODE NOTE"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" description="formatCode">
+			<Code code="PDF" display="PDF" codingScheme="Connect-a-thon formatCodes"/>
+			<Code code="CDAR2/IHE 1.0" display="CDAR2/IHE 1.0" codingScheme="Connect-a-thon formatCodes"/>
+			<Code code="urn:ihe:pcc:xphr:2007" display="Exchange of Personal Health Records" codingScheme="IHE PCC"/>
+			<Code code="urn:ihe:iti:xds-sd:pdf:2008" display="Scanned Documents PDF" codingScheme="IHE PCC"/>
+			<Code code="urn:ihe:iti:bppc-sd:2007" display="Basic Patient Privacy Consents with Scanned Document" codingScheme="IHE PCC"/>
+			<Code code="urn:ihe:iti:bppc:2007" display="Basic Patient Privacy Consents" codingScheme="IHE PCC"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" description="contentTypeCode">
+			<Code code="Communication" display="Communication" codingScheme="Connect-a-thon contentTypeCodes"/>
+			<Code code="Summarization of episode" display="Summarization of episode" codingScheme="Connect-a-thon contentTypeCodes"/>
+			<Code code="34133-9" codingScheme="2.16.840.1.113883.6.1" display="SUMMARIZATION OF EPISODE NOTE"/>
+			<Code code="18725-2" codingScheme="2.16.840.1.113883.6.1" display="MICROBIOLOGY STUDIES"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" description="eventCodeList">
+			<Code code="Colonoscopy" display="Colonoscopy" codingScheme="Connect-a-thon eventCodeList"/>
+			<Code code="1.3.6.1.4.1.21367.2006.7.106" display="OPT-OUT" codingScheme="Connect-a-thon eventCodeList"/>
+			<Code code="1.3.6.1.4.1.21367.2006.7.108" display="OPT-IN" codingScheme="Connect-a-thon eventCodeList"/>
+			<Code codingScheme="SNM3" code="T-280A0" display="Apex of Lung"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:1ba97051-7806-41a8-a48b-8fce7af683c5" description="folderCodeList">
+			<Code code="Referrals" codingScheme="Connect-a-thon folderCodeList" display="Referrals"/>
+			<Code code="Alergy Treatments" codingScheme="Connect-a-thon folderCodeList" display="Alergy Treatments"/>
+		</CodeType>
+		<CodeType attribute="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" description="confidentialityCode">
+			<Code code="REQUEST" codingScheme="2.16.840.1.113883.3.18.7.1" display="Request of the Individual" codeSystemName="nhin-purpose"/>
+			<Code code="TREATMENT" codingScheme="2.16.840.1.113883.3.18.7.1" display="Treatment" codeSystemName="nhin-purpose"/>
+			<Code code="OPERATIONS" codingScheme="2.16.840.1.113883.3.18.7.1" display="Healthcare Operations" codeSystemName="nhin-purpose"/>
+			<Code code="PSYCHOTHERAPY" codingScheme="2.16.840.1.113883.3.18.7.1" display="Use or disclosure of Psychotherapy Notes" codeSystemName="nhin-purpose"/>
+			<Code code="EMERGENCY" codingScheme="2.16.840.1.113883.3.18.7.1" display="Permission cannot practicably be provided because of the individual’s incapacity or an emergency" codeSystemName="nhin-purpose"/>
+			<Code code="FAMILY" codingScheme="2.16.840.1.113883.3.18.7.1" display="Disclose to a family member, other relative, or a close personal friend of the individual" codeSystemName="nhin-purpose"/>
+			<Code code="PRESENT" codingScheme="2.16.840.1.113883.3.18.7.1" display="Uses and disclosures with the individual present." codeSystemName="nhin-purpose"/>
+			<Code code="THREAT" codingScheme="2.16.840.1.113883.3.18.7.1" display="Uses and disclosures to avert a serious threat to health or safety." codeSystemName="nhin-purpose"/>
+		</CodeType>
+	</Codes>
+
+	<!-- IHE Actors supported by the affinity domain -->
+	<Actors>
+		<PixManager>
+			<Entry oid="1.3.6.1.4.1.33349.3.1.2.2.0.0" name="PIX Manager" endpoint="mllp://142.222.16.8:2600" secure="true" application="MOH_CAAT_CR" facility="MOH_CAAT"/>
+		</PixManager>
+		<PdqSupplier>
+			<Entry oid="1.3.6.1.4.1.33349.3.1.2.2.0.0" name="PDQ Supplier" endpoint="mllp://142.222.16.8:2600" secure="true" application="MOH_CAAT_CR" facility="MOH_CAAT"/>
+		</PdqSupplier>
+		<DocumentRepository>
+			<Entry oid="1.2.3.4.5.2000.1.2" name="XDS Repository" endpoint="https://142.222.16.8:8181/axis2/services/xdsrepositoryb" secure="true" application="XDS_REPO" facility="OHT"/>
+		</DocumentRepository>
+		<DocumentRegistry>
+			<Entry oid="1.2.3.4.5.2000.1.3" name="XDS Registry" endpoint="https://142.222.16.8:8181/axis2/services/xdsregistryb" secure="true" application="XDS_REG" facility="OHT"/>
+		</DocumentRegistry>
+		<AuditRepository>
+			<Entry oid="1.2.3.4.5.2000.1.7" name="ATNA Repository" endpoint="udp://142.222.16.8:2861" secure="false" application="ATNA" facility="OHT"/>
+		</AuditRepository>
+		<TimeServer>
+			<Entry oid="1.2.3.4.5.2000.1.9" name="Time Server" endpoint="udp://142.222.45.239:123" secure="false" application="TS" facility="OHT"/>
+		</TimeServer>
+	</Actors>
+
+</AffinityDomain>

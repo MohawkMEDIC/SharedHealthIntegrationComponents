@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/tylerg/Documents/SharedHealthComponents/SVS/xml-resources/web-service-references/SVS_ValueSetRepository/wsdl/SVS_ValueSetRepository.wsdl" uri="wsdl/SVS_ValueSetRepository.wsdl"/>
+    <system systemId="file:/C:/Users/tylerg/Documents/SharedHealthComponents/SVS/xml-resources/web-service-references/SVS_ValueSetRepository/schema/IHE/SVS.xsd" uri="schema/IHE/SVS.xsd"/>
+    <system systemId="file:/C:/Users/tylerg/Documents/SharedHealthComponents/SVS/xml-resources/web-service-references/SVS_ValueSetRepository/schema/HL7V3/NE2008/coreschemas/datatypes-base.xsd" uri="schema/HL7V3/NE2008/coreschemas/datatypes-base.xsd"/>
+    <system systemId="file:/C:/Users/tylerg/Documents/SharedHealthComponents/SVS/xml-resources/web-service-references/SVS_ValueSetRepository/schema/HL7V3/NE2008/coreschemas/voc.xsd" uri="schema/HL7V3/NE2008/coreschemas/voc.xsd"/>
+    <system systemId="file:/C:/Users/tylerg/Documents/SharedHealthComponents/SVS/xml-resources/web-service-references/SVS_ValueSetRepository/schema/HL7V3/NE2008/coreschemas/datatypes.xsd" uri="schema/HL7V3/NE2008/coreschemas/datatypes.xsd"/>
+</catalog>

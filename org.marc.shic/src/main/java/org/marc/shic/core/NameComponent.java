@@ -1,0 +1,61 @@
+/**
+ * Copyright 2013 Mohawk College of Applied Arts and Technology
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you 
+ * may not use this file except in compliance with the License. You may 
+ * obtain a copy of the License at 
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the 
+ * License for the specific language governing permissions and limitations under 
+ * the License.
+ * 
+ * 
+ * Date: October 29, 2013
+ * 
+ */
+package org.marc.shic.core;
+
+/**
+ * 
+ * @author Nebri
+ */
+public class NameComponent {
+	private String value;
+	private PartType type;
+
+	/**
+	 * 
+	 * @return
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * 
+	 * @param value
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public PartType getType() {
+		return type;
+	}
+
+	/**
+	 * 
+	 * @param type
+	 */
+	public void setType(PartType type) {
+		this.type = type;
+	}
+}

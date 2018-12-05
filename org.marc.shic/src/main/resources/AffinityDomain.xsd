@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AffinityDomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Policies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Policy">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Acknowledgement">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PolicyDocument" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Acl">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Entry">
+                            <xs:complexType>
+                              <xs:attribute name="role" type="xs:string" use="required" />
+                              <xs:attribute name="permission" type="xs:string" use="required" />
+                              <xs:attribute name="action" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="display" type="xs:string" use="required" />
+                  <xs:attribute name="code" type="xs:string" use="required" />
+                  <xs:attribute name="codingScheme" type="xs:string" use="required" />
+                  <xs:attribute name="codeSystemName" type="xs:string" use="optional" />
+                  <xs:attribute name="duration" type="xs:double" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValueSets">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="ValueSet">
+                <xs:complexType>
+                  <xs:attribute name="id" type="xs:string" use="required" />
+                  <xs:attribute name="description" type="xs:string" use="required" />
+                  <xs:attribute name="attribute" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Codes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="CodeType">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Code">
+                      <xs:complexType>
+                        <xs:attribute name="code" type="xs:string" use="required" />
+                        <xs:attribute name="display" type="xs:string" use="required" />
+                        <xs:attribute name="codingScheme" type="xs:string" use="required" />
+                        <xs:attribute name="codeSystemName" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="attribute" type="xs:string" use="required" />
+                  <xs:attribute name="description" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Actors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PixManager">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PdqSupplier">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DocumentRepository">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DocumentRegistry">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DocumentRecipient">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RespondingGatewayRepository">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RespondingGatewayRegistry">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AuditRepository">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SvsRepository">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="TimeServer">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Entry">
+                      <xs:complexType>
+                        <xs:attribute name="oid" type="xs:string" use="required" />
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="endpoint" type="xs:string" use="required" />
+                        <xs:attribute name="secure" type="xs:boolean" use="required" />
+                        <xs:attribute name="application" type="xs:string" use="required" />
+                        <xs:attribute name="facility" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="oid" type="xs:string" use="required" />
+      <xs:attribute name="name" type="xs:string" use="required" />
+      <xs:attribute name="permission" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

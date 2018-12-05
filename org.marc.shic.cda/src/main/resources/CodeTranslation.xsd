@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Laura Graham (Mohawk College) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Code">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element name="Translations">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Code" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="code"/>
+			<xs:attribute name="codeSystem"/>
+			<xs:attribute name="codeSystemName"/>
+			<xs:attribute name="codeSystemVersion"/>
+			<xs:attribute name="displayName"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CodeList">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Code" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
